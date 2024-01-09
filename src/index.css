@@ -1,13 +1,115 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 150%;
+  min-height: 100%;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  min-height: 100%;
+  min-width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App-header {
+  font-size: 8px;
+}
+
+.App {
+  font-size: 8px;
+}
+
+.Headers {
+  font-size: 26px;
+}
+
+.Results {
+  font-size: 16px;
+}
+
+.Results_List {
+  font-size: 16px;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.Text_Submit {
+  width: 600px;
+  height: 100px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 750px) {
+  .Text_Submit {
+    width: 90%; 
+  }
+
+  .Results {
+    font-size: 16px; 
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .Headers {
+    font-size: 20px; 
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+}
+
+@media only screen and (max-width: 992px) {
+
+}
+
+@media only screen and (max-width: 500px) {
+  .Headers {
+    font-size: 20px; 
+  }
+
+  .Results {
+    font-size: 14px; 
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .Results_List {
+    font-size: 14px; 
+  }
+
+  .Text_Submit {
+    width: 80%;
+  }
+
+
+}
+
+@media only screen and (max-width: 480px) {
+  .Headers {
+    font-size: 20px; 
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .Results {
+    font-size: 14px; 
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .Results_List {
+    font-size: 14px; 
+  }
+
+  .Text_Submit {
+    width: 80%;
+  }
 }
