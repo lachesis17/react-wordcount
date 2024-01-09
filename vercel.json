@@ -3,6 +3,6 @@
   "builds": [{ "src": "server.js", "use": "@vercel/node" }],
   "routes": [{ "src": "/count-words", "dest": "server.js" }],
   "env": {
-    "PORT": 5000
+    "PORT": "5000"
   }
 }
