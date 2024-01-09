@@ -28,7 +28,7 @@ const text_input = ({onSubmit, className}) => {
   const realtime_response = async (newText) => {
     update_text(newText);
     try {
-      const response = await axios.post('https://react-wordcount-gamma.vercel.app/', { file: newText });
+      const response = await axios.post('http://localhost:5000/count-words', {file: newText});
       return_results(response.data);
       onSubmit(response.data); // send result to parent
     } catch (error) {
