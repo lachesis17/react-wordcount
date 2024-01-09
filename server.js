@@ -5,7 +5,14 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors()); 
+const corsOptions = {
+    origin: 'https://your-vercel-app-name.vercel.app', // Update with your actual Vercel app domain
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+    optionsSuccessStatus: 204,
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 app.post('/count-words', (req, res) => {
@@ -53,4 +60,4 @@ function count_words(file) { // kinda translated my python function here...... c
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
-  });
+});
