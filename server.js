@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 const corsOptions = {
-    origin: 'https://your-vercel-app-name.vercel.app', // Update with your actual Vercel app domain
+    origin: 'https://react-wordcount-gold.vercel.app/', // Update with your actual Vercel app domain
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     optionsSuccessStatus: 204,
