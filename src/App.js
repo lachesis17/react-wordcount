@@ -26,7 +26,7 @@ function App() {
 
   const handle_entry = async (text) => {
     try {
-      const response = await fetch('http://localhost:5000/count-words', {
+      const response = await fetch('https://react-wordcount-gamma.vercel.app/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
