@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/lachesis17.github.io/react-wordcount/static/css/main.b3e26661.css",
+    "main.js": "/lachesis17.github.io/react-wordcount/static/js/main.b1c617ea.js",
+    "static/js/787.65452c62.chunk.js": "/lachesis17.github.io/react-wordcount/static/js/787.65452c62.chunk.js",
+    "index.html": "/lachesis17.github.io/react-wordcount/index.html",
+    "main.b3e26661.css.map": "/lachesis17.github.io/react-wordcount/static/css/main.b3e26661.css.map",
+    "main.b1c617ea.js.map": "/lachesis17.github.io/react-wordcount/static/js/main.b1c617ea.js.map",
+    "787.65452c62.chunk.js.map": "/lachesis17.github.io/react-wordcount/static/js/787.65452c62.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b3e26661.css",
+    "static/js/main.b1c617ea.js"
+  ]
+}
