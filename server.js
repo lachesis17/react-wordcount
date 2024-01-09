@@ -3,7 +3,11 @@ const body_parser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
 
 app.use(cors()); 
 app.use(body_parser.json());
@@ -12,10 +16,6 @@ app.post('/count-words', (req, res) => {
   const {file} = req.body;
   const result = count_words(file);
   res.json(result);
-});
-
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`); // double check the port
 });
 
 function count_words(file) { // kinda translated my python function here...... cause i hate js
