@@ -9,6 +9,7 @@
     "axios": "^1.6.5",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
+    "eslint-plugin-react": "^7.33.2",
     "express": "^4.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -36,7 +37,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
     "gh-pages": "^6.1.1"
-  },
-  "homepage": "lachesis17.github.io/react-wordcount"
+  }
 }

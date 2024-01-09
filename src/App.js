@@ -22,6 +22,7 @@ function format_result(result) {
 }
 
 function App() {
+  // eslint-disable-next-line
   const [result, return_results] = useState(null);
 
   const handle_entry = async (text) => {
@@ -46,6 +47,7 @@ function App() {
     }
   };
 
+  // eslint-disable-next-line
   return (
     <div className="App">
       <header className="App-header">

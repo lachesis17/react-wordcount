@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 
-const text_input = ({onSubmit, className}) => {
+const TextInput = ({onSubmit, className}) => {
   const [text, update_text] = useState('');
   const [result, return_results] = useState(null);
 
@@ -66,4 +66,4 @@ const text_input = ({onSubmit, className}) => {
   );
 };
 
-export default text_input;
+export default TextInput;
