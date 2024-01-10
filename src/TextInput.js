@@ -28,7 +28,7 @@ const TextInput = ({onSubmit, className}) => {
   const realtime_response = async (newText) => {
     update_text(newText);
     try {
-      const response = await axios.post('http://localhost:5000/count-words', newText, {
+      const response = await axios.post('https://react-wordcount-kappa.vercel.app/count-words', newText, {
         headers: {
           'Content-Type': 'text/plain',
         },
