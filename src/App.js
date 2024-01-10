@@ -27,7 +27,7 @@ function App() {
 
   const handle_entry = async (text) => {
     try {
-      const response = await fetch('https://react-wordcount-kappa.vercel.app/', {
+      const response = await fetch('https://react-wordcount-kappa.vercel.app/count-words', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
