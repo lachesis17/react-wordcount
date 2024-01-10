@@ -15,7 +15,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
-app.post('/api/count-words', (req, res) => {
+app.post('/count-words', (req, res) => {
     const { file } = req.body;
     const result = count_words(file);
     res.json(result);
