@@ -46,13 +46,12 @@ function count_words(file) { // kinda translated my python function here...... c
 
     const max_freq = Math.max(...Object.values(freq_lens));
     const most_freq_lens = Object.keys(freq_lens).filter(length => freq_lens[length] === max_freq);
-    const most_freq_lens_count = most_freq_lens.length;
 
     return {
         'Word count': word_count,
         'Average word length': parseFloat(avg_len.toFixed(3)),
         'Number of words of length': word_lens_counts,
-        'The most frequently occurring word length is': `(${most_freq_lens_count}) for word lengths of: ${most_freq_lens.join(' & ')}`, // weird but pretty
+        'The most frequently occurring word length is': `(${most_freq_lens.length}) for word lengths of: ${most_freq_lens.join(' & ')}`,
     };
 }
 
