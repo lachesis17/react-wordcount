@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 const corsOptions = {
-    origin: 'https://react-wordcount-kappa.vercel.app/',
+    origin: '*',
     methods: 'POST',
   };
   
@@ -14,7 +14,10 @@ app.use(cors(corsOptions));
 app.use(bodyParser.text());
 
 app.post('/count-words', (req, res) => {
-    const { body } = req;
+    res.setHeader('Access-Control-Allow-Origin', 'https://react-wordcount-kappa.vercel.app/');
+    res.setHeader('Access-Control-Allow-Methods', 'POST');
+
+    const {body} = req;
     const result = count_words(body);
     res.json(result);
 });
