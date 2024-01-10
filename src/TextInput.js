@@ -28,17 +28,17 @@ const TextInput = ({onSubmit, className}) => {
   const realtime_response = async (newText) => {
     update_text(newText);
     try {
-      const response = await axios.post('https://react-wordcount-kappa.vercel.app/count-words', newText, {
-        headers: {
-          'Content-Type': 'text/plain',
-        },
-      });
-      return_results(response.data);
-      onSubmit(response.data); // send result to parent
+        const response = await axios.post('https://react-wordcount-kappa.vercel.app/count-words', newText, {
+            headers: {
+                'Content-Type': 'text/plain',
+            },
+        });
+        return_results(response.data);
+        onSubmit(response.data);
     } catch (error) {
-      console.error('Error counting words:', error);
+        console.error('Error counting words:', error);
     }
-  };
+};
 
   const drop_event = async (event) => {
     event.preventDefault();
