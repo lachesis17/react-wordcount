@@ -29,10 +29,10 @@ const TextInput = ({onSubmit, className}) => {
     update_text(newText);
     try {
         const response = await axios.post('/api/count-words', newText, {
-            headers: {
-                'Content-Type': 'text/plain',
-            },
-        });
+          headers: {
+              'Content-Type': 'text/plain',
+          },
+      });
         return_results(response.data);
         onSubmit(response.data);
     } catch (error) {

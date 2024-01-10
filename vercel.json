@@ -1,0 +1,8 @@
+{
+  "routes": [
+    {
+      "src": "/api/count-words",
+      "dest": "/api/server.js"
+    }
+  ]
+}
