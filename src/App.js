@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import TextInput from './TextInput';
 
-const serverUrl = process.env.REACT_APP_SERVER_URL || 'http://localhost:5000';
+const serverUrl = '/.netlify/functions';
 
 function format_result(result) {
   const result_formatted = [
