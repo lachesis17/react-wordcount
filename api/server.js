@@ -20,13 +20,13 @@ app.listen(port, () => {
 
 function count_words(file) { // kinda translated my python function here...... cause i hate js
     const text = typeof file === 'string' ? file : '';
-    const words = text.match(/(?:\d{2}\/\d{2}\/\d{4}|[\w&]+(?:['-]\w+)?)|[\w&]+/g) || [];
+    const cleanedText = text.replace(/[^a-zA-Z0-9&/ ]+/g, ''); // only permit ampersand, "/" for dates, and alphanumeric
+    const words = cleanedText.match(/(?:\d{2}\/\d{2}\/\d{4}|[\w&]+(?:['-]\w+)?)/g) || []; // i hate this
     const word_lens = words.map(word => {
         if (/^\d{2}\/\d{2}\/\d{4}$/.test(word)) {
             return word.length;
         } else {
-            const cleaned = word.replace(/[.,!?*=[\]{}()#_@/:;£`~\\-]/g, '');
-            return cleaned.length;
+            return word.length;
         }
     });
 

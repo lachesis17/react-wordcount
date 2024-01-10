@@ -6,6 +6,10 @@ const TextInput = ({onSubmit, className}) => {
   const [result, return_results] = useState(null);
 
   const return_result = () => {
+    if (!result || text.trim() === '') {
+      return null;
+    }
+
     const word_lens_counts = result['Number of words of length'];
     const most_freq_lengths = Object.keys(word_lens_counts).filter(
       (length) => word_lens_counts[length] === Math.max(...Object.values(word_lens_counts))
