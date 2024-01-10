@@ -8,7 +8,7 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.text());
 
-app.post('/count-words', (req, res) => {
+app.post('/api/count-words', (req, res) => {
     const { body } = req;
     const result = count_words(body);
     res.json(result);
