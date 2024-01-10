@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 const corsOptions = {
-    origin: 'http://localhost:5000',
+    origin: 'https://react-wordcount-kappa.vercel.app',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     optionsSuccessStatus: 204,
