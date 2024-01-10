@@ -16,9 +16,9 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 app.post('/count-words', (req, res) => {
-  const {file} = req.body;
-  const result = count_words(file);
-  res.json(result);
+    const { file } = req.body;
+    const result = count_words(file);
+    res.json(result);
 });
 
 function count_words(file) { // kinda translated my python function here...... cause i hate js
@@ -61,3 +61,5 @@ function count_words(file) { // kinda translated my python function here...... c
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+
+module.exports = app;
