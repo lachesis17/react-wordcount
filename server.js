@@ -6,23 +6,26 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 const corsOptions = {
-    origin: 'https://react-wordcount-kappa.vercel.app/',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-    optionsSuccessStatus: 204,
-};
-
+    origin: 'http://localhost:3000', // Replace with your React app's origin
+    methods: 'POST',
+  };
+  
 app.use(cors(corsOptions));
-app.use(bodyParser.json());
+app.use(bodyParser.text());
 
 app.post('/count-words', (req, res) => {
-    const { file } = req.body;
-    const result = count_words(file);
+    const { body } = req;
+    const result = count_words(body);
     res.json(result);
 });
 
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
+
 function count_words(file) { // kinda translated my python function here...... cause i hate js
-    const words = file.match(/(?:\d{2}\/\d{2}\/\d{4}|[\w&]+(?:['-]\w+)?)|[\w&]+/g) || [];
+    const text = typeof file === 'string' ? file : '';
+    const words = text.match(/(?:\d{2}\/\d{2}\/\d{4}|[\w&]+(?:['-]\w+)?)|[\w&]+/g) || [];
     const word_lens = words.map(word => {
         if (/^\d{2}\/\d{2}\/\d{4}$/.test(word)) {
             return word.length;
@@ -57,9 +60,5 @@ function count_words(file) { // kinda translated my python function here...... c
         'The most frequently occurring word length is': most_freq_lens_str,
     };
 }
-
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-});
 
 module.exports = app;
