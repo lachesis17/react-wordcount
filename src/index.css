@@ -42,8 +42,42 @@ body {
 }
 
 .Text_Submit {
-  width: 600px;
-  height: 100px;
+  width: 700px;
+  height: 150px;
+}
+
+#git {
+  background-image: transparent;
+  background-color: transparent;
+  border-radius: 50%;
+  outline: none;
+  height: 80px;
+  width: 80px;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  border: transparent;
+  margin-bottom: 20px;
+  opacity: 0.90;
+  transform: scale(0.85);
+  transition: .2s ease-in-out;
+}
+
+#git:hover {
+  opacity: 1.0;
+  background-image: transparent;
+  background-color: transparent;
+  color: #f0f0f0;     
+  text-shadow: unset;
+  transition: .2s ease-in-out;
+  transform: scale(1.0);
+}
+
+#git:active {
+  transform: scale(0.9);
+  transition: .1s ease-in-out;
 }
 
 /* Responsive Styles */
@@ -66,10 +100,6 @@ body {
 
 }
 
-@media only screen and (max-width: 992px) {
-
-}
-
 @media only screen and (max-width: 500px) {
   .Headers {
     font-size: 20px; 
@@ -88,8 +118,6 @@ body {
   .Text_Submit {
     width: 80%;
   }
-
-
 }
 
 @media only screen and (max-width: 480px) {

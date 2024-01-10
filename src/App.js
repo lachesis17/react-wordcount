@@ -32,6 +32,10 @@ function App() {
       <header className="App-header">
         <h1 className='Headers'>Gimme some words. I will count them and stuff.</h1>
         <TextInput className='Text_Submit' onSubmit={handle_entry} />
+        <br></br>
+        <a href="https://github.com/lachesis17/react-wordcount">
+        <img id="git" src="/gitLogo.png" alt="" width="200px" height="200px" />
+        </a>
       </header>
     </div>
   );
