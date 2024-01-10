@@ -2,28 +2,8 @@ import React, { useState } from 'react';
 import './App.css';
 import TextInput from './TextInput';
 
-function format_result(result) {
-  const result_formatted = [
-    `Word count: ${result['Word count']},`,
-    `Average word length: ${result['Average word length']},`,
-    'Number of words of length:',
-  ];
-
-  for (const [key, value] of Object.entries(result['Number of words of length'])) {
-    result_formatted.push(`  - "${key}": ${value}`);
-  }
-
-  const most_freq_lengths = Object.keys(result).find((key) =>
-    key.startsWith('The most frequently occurring word length is')
-  );
-  result_formatted.push(`${most_freq_lengths}: ${result[most_freq_lengths]}`);
-
-  return result_formatted.join('\n');
-}
-
 function App() {
-  // eslint-disable-next-line
-  const [result, return_results] = useState(null);
+  const return_results = useState(null);
 
   const handle_entry = async (text) => {
     try {
@@ -38,8 +18,7 @@ function App() {
 
       if (response.ok) {
         const data = await response.json();
-        const result_formatted = format_result(data);
-        return_results(result_formatted);
+        return_results(data);
       } else {
         console.error('Server returned an error');
       }
@@ -48,7 +27,6 @@ function App() {
     }
   };
 
-  // eslint-disable-next-line
   return (
     <div className="App">
       <header className="App-header">
