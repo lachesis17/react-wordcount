@@ -6,6 +6,11 @@ const TextInput = ({onSubmit, className}) => {
   const [result, return_results] = useState(null);
 
   const return_result = () => {
+    const word_lens_counts = result['Number of words of length'];
+    const most_freq_lengths = Object.keys(word_lens_counts).filter(
+      (length) => word_lens_counts[length] === Math.max(...Object.values(word_lens_counts))
+    );
+  
     return (
       <div>
         <h2 className='Headers'>Word Count Results:</h2>
@@ -13,13 +18,13 @@ const TextInput = ({onSubmit, className}) => {
         <p className='Results'>Average word length: {result['Average word length']}</p>
         <p className='Results'>Number of words of length:</p>
         <ul className='Results_List'>
-          {Object.entries(result['Number of words of length']).map(([key, value]) => (
+          {Object.entries(word_lens_counts).map(([key, value]) => (
             <li key={key}>{`${key}: ${value}`}</li>
           ))}
         </ul>
         <p className='Results'>
-          The most frequently occurring word length is ({result['The most frequently occurring word length is']}){' '}
-          for word lengths of: ({result['The most frequently occurring word length is']})
+          The most frequently occurring word length is ({most_freq_lengths.length}) for word lengths of:{' '}
+          ({most_freq_lengths.map((length) => length.replace(/\D/g, '')).join(' & ')})
         </p>
       </div>
     );
@@ -29,6 +34,7 @@ const TextInput = ({onSubmit, className}) => {
     update_text(newText);
     try {
         const response = await axios.post('/api/count-words', newText, {
+        //const response = await axios.post('http://localhost:5000/api/count-words', newText, {
           headers: {
               'Content-Type': 'text/plain',
           },

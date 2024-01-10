@@ -28,6 +28,7 @@ function App() {
   const handle_entry = async (text) => {
     try {
       const response = await fetch('reactnodejs-wordcount.vercel.app/count-words', {
+      //const response = await fetch('http://localhost:5000/api/count-words', {
         method: 'POST',
         headers: {
           'Content-Type': 'text/plain',
