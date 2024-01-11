@@ -5,7 +5,7 @@ import TextInput from './TextInput';
 function App() {
   const return_results = useState(null);
 
-  const handle_entry = async (text) => {
+  const handle_entry = async (text) => { // hooked up to the onSubmit below, and the response triggered by the component
     try {
       const response = await fetch('reactnodejs-wordcount.vercel.app/count-words', {
       //const response = await fetch('http://localhost:5000/api/count-words', {
@@ -18,7 +18,7 @@ function App() {
 
       if (response.ok) {
         const data = await response.json();
-        return_results(data);
+        return_results(data); // update the app state with the server response to refresh ui
       } else {
         console.error('Server returned an error');
       }

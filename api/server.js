@@ -6,11 +6,11 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(cors());
-app.use(bodyParser.text());
+app.use(bodyParser.text());  // parse text
 
 app.post('/api/count-words', (req, res) => {
-    const { body } = req;
-    const result = count_words(body);
+    const { body } = req; // listening for a POST req from axios via text component
+    const result = count_words(body); // use the request to count the words
     res.json(result);
 });
 
