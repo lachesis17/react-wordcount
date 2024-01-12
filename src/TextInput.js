@@ -16,7 +16,7 @@ const TextInput = ({onSubmit, className}) => {
     );
   
     return ( // make the response pretty instead of JSON
-      <div>
+      <div id='ResultContainer'>
         <h2 className='Headers'>Word Count Results:</h2>
         <p className='Results'>Word count: {result['Word count']}</p>
         <p className='Results'>Average word length: {result['Average word length']}</p>

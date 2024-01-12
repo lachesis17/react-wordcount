@@ -37,8 +37,17 @@ body {
   padding-bottom: 14px;
 }
 
+#ResultContainer {
+  width: 50%;
+  margin: 0 auto;
+}
+
 .Results {
   font-size: 16px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  max-width: 100%;
 }
 
 .Results_List {
