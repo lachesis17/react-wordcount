@@ -8,7 +8,7 @@ function App() {
 
   const handle_entry = async (text) => { // hooked up to the onSubmit below, and the response triggered by the component
     try {
-      const response = await fetch('reactnodejs-wordcount.vercel.app/count-words', {
+      const response = await fetch('/api/count-words', {
       //const response = await fetch('http://localhost:5000/api/count-words', {
         method: 'POST',
         headers: {
