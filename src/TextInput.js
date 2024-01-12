@@ -71,10 +71,8 @@ const TextInput = ({onSubmit, className}) => {
         value={text}
         onChange={(e) => realtime_response(e.target.value)}  // listens for event on any change to the text to update the text
         placeholder="Feed me words... with your keyboard... or throw your .txt file at me..."
-        className={className}
+        className={`rounded-text-input ${className}`}
       />
-      <br />
-
       {result && return_result()}
     </div>
   ); // update the result state on a drag or change event and format it on update
