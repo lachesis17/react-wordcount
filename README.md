@@ -25,4 +25,4 @@ npm run start
 - API request on: [http://localhost:5000/api/count-words](http://localhost:5000/api/count-words)
 
 \
-![thumb](https://github.com/lachesis17/react-wordcount/assets/78860436/f6e83379-66c0-4aca-9ff1-d229268a5915)
+![lg](https://github.com/lachesis17/react-wordcount/assets/78860436/7ca86366-137b-4a2b-9112-a541e4d14f9d)
