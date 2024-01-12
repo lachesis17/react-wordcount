@@ -29,6 +29,7 @@ body {
 
 .Headers {
   font-size: 26px;
+  padding-bottom: 14px;
 }
 
 .Results {
@@ -44,6 +45,23 @@ body {
 .Text_Submit {
   width: 700px;
   height: 150px;
+  max-width: 95%;
+}
+
+@media (min-width: 200px) {
+  .Text_Submit {
+    width: 700px;
+  }
+}
+
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1250ms ease-in-out;
 }
 
 #git {
@@ -80,10 +98,10 @@ body {
   transition: .1s ease-in-out;
 }
 
-/* Responsive Styles */
 @media only screen and (max-width: 750px) {
   .Text_Submit {
-    width: 90%; 
+    min-width: 70%;
+    max-width: 70%;
   }
 
   .Results {
@@ -116,7 +134,8 @@ body {
   }
 
   .Text_Submit {
-    width: 80%;
+    min-width: 60%;
+    max-width: 60%;
   }
 }
 
@@ -138,6 +157,7 @@ body {
   }
 
   .Text_Submit {
-    width: 80%;
+    min-width: 50%;
+    max-width: 50%;
   }
 }
