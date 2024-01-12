@@ -23,3 +23,6 @@ npm run start
 - App will be available on [http://localhost:3000/](http://localhost:3000/)
 - Server will run on [http://localhost:5000/](http://localhost:5000/)
 - API request on: [http://localhost:5000/api/count-words](http://localhost:5000/api/count-words)
+
+\
+![thumb](https://github.com/lachesis17/react-wordcount/assets/78860436/f6e83379-66c0-4aca-9ff1-d229268a5915)
