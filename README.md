@@ -7,7 +7,7 @@ Either enter text into the text input or drag & drop a plaintext.txt file into t
 
 Hosted via vercel at: https://reactnodejs-wordcount.vercel.app/
 
-<img src="https://github.com/lachesis17/react-wordcount/assets/78860436/7ca86366-137b-4a2b-9112-a541e4d14f9d" width="700" alt="lg">
+<a href="https://reactnodejs-wordcount.vercel.app/"><img src="https://github.com/lachesis17/react-wordcount/assets/78860436/7ca86366-137b-4a2b-9112-a541e4d14f9d" width="700" alt="lg"></a>
 
 # Commands:
 To run locally:
