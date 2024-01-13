@@ -7,6 +7,8 @@ Either enter text into the text input or drag & drop a plaintext.txt file into t
 
 Hosted via vercel at: https://reactnodejs-wordcount.vercel.app/
 
+<a href="https://reactnodejs-wordcount.vercel.app/"><img src="https://github.com/lachesis17/react-wordcount/assets/78860436/7ca86366-137b-4a2b-9112-a541e4d14f9d" width="700" alt="lg"></a>
+
 # Commands:
 To run locally:
 - Uncomment the localhost line 32 in src/App.js and line 37 in src/TextInput.js
@@ -23,6 +25,3 @@ npm run start
 - App will be available on [http://localhost:3000/](http://localhost:3000/)
 - Server will run on [http://localhost:5000/](http://localhost:5000/)
 - API request on: [http://localhost:5000/api/count-words](http://localhost:5000/api/count-words)
-
-\
-![thumb](https://github.com/lachesis17/react-wordcount/assets/78860436/f6e83379-66c0-4aca-9ff1-d229268a5915)
