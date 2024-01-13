@@ -14,7 +14,9 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background: linear-gradient(-90deg, rgb(40, 44, 52), rgb(20, 20, 20), rgb(40, 44, 52), rgb(20, 20, 20));
+  background-size: 4000% 200%;
+  animation: gradientAnimation 15s ease infinite;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -34,5 +36,17 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
